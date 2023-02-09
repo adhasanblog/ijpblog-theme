@@ -1,0 +1,15 @@
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+header .top-header {
+  display: grid;
+  height: 150px;
+  gap: 24px;
+  padding: 24px;
+
+  div {
+    background-color: grey;
+  }
+}

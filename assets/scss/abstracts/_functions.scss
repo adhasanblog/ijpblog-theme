@@ -1,0 +1,21 @@
+@function nav-font-size($text-transform) {
+  $font-size: 0;
+  @if $text-transform == uppercase {
+    $font-size: 12px;
+  } @else if $text-transform == capitalize {
+    $font-size: 14px;
+  } @else {
+    $font-size: 16px;
+  }
+
+  @return $font-size;
+}
+
+@function breakpoint-min($name, $breakpoints: $media-breakpoints) {
+  $min: map-get(
+    $map: $breakpoints,
+    $key: $name,
+  );
+
+  @return if($min != 0, $min, null);
+}

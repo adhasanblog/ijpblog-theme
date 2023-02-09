@@ -1,0 +1,96 @@
+.main-menu {
+  background-color: black;
+  color: white;
+  text-transform: $text-transform;
+  font-size: nav-font-size($text-transform);
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+
+  &.text-uppercase {
+    $text-transform: uppercase;
+    text-transform: $text-transform;
+    font-size: nav-font-size($text-transform);
+  }
+
+  &.text-capitalize {
+    $text-transform: capitalize;
+    text-transform: $text-transform;
+    font-size: nav-font-size($text-transform);
+  }
+
+  .hamburger-button {
+    display: block;
+
+    @include media-min-width(md) {
+      display: none;
+    }
+  }
+
+  ul {
+    display: none;
+    flex-direction: row;
+    list-style: none;
+    gap: 12px;
+
+    @include media-min-width(md) {
+      display: flex;
+    }
+
+    li {
+      padding: 12px;
+      position: relative;
+
+      &.sub-menu {
+        ul {
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          background-color: red;
+          color: black;
+          min-width: 200px;
+          top: 100%;
+          gap: 6px;
+          transform-origin: top;
+          transform: scaleY(0);
+          transition: all 0.5s ease-in-out;
+
+          &::before {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: blue;
+            top: -2px;
+            content: '';
+          }
+
+          li {
+            padding: 12px;
+          }
+        }
+
+        &:hover {
+          ul {
+            transform: scaleY(100%);
+          }
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        display: inline-block;
+        width: 100%;
+      }
+    }
+  }
+}
+
+footer nav {
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+}

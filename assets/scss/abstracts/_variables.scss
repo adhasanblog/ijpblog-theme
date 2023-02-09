@@ -1,0 +1,32 @@
+$color: (
+  primary: black,
+  secondary: white,
+);
+
+$fonts: (
+  ('Poppins', 300, 'Poppins-Light.ttf'),
+  ('Poppins', 400, 'Poppins-Regular.ttf'),
+  ('Poppins', 500, 'Poppins-Medium.ttf'),
+  ('Poppins', 600, 'Poppins-SemiBold.ttf'),
+  ('Poppins', 700, 'Poppins-Bold.ttf'),
+  ('Poppins', 800, 'Poppins-ExtraBold.ttf'),
+  ('Poppins', 900, 'Poppins-Black.ttf'),
+  ('Roboto', 300, 'Roboto-Light.ttf'),
+  ('Roboto', 400, 'Roboto-Regular.ttf'),
+  ('Roboto', 500, 'Roboto-Medium.ttf'),
+  ('Roboto', 600, 'Roboto-SemiBold.ttf'),
+  ('Roboto', 700, 'Roboto-Bold.ttf'),
+  ('Roboto', 800, 'Roboto-ExtraBold.ttf'),
+  ('Roboto', 900, 'Roboto-Black.ttf')
+);
+
+$text-transform: lowercase;
+
+$media-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
